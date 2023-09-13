@@ -1,0 +1,34 @@
+body{
+    overflow: hidden;
+    background-image: url('2.jpg');
+    background-size:cover;
+    height: 100%;
+    width: 100%;
+}
+
+.frm{
+    background-color: rgba(22, 22, 22, 0.75);
+    box-shadow: 0 0 10px rgb(78, 76, 76);
+    height: 400px;
+    width: 350px;
+    margin-top: 7%;
+    margin-left: 4%;
+    border-radius: 25px;
+}
+.footer-container
+{
+    background-color: rgba(22, 22, 22, 0.75);
+    box-shadow: 0 0 10px rgb(78, 76, 76);
+    margin-top: 4%;
+
+}
+.header-container
+{
+    background-color: rgba(8, 8, 8, 0.993);
+    height: 5%;
+    display: flex;
+    /* box-shadow: 0 0 10px rgb(78, 76, 76); */
+    
+}
+
+

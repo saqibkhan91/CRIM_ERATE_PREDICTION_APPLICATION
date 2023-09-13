@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css')}}">
+    <title>Document</title>
+</head>
+
+
+<body >
+  <div>
+  <div class="header-container">
+        
+    <div style="margin-left: 2%;">
+      <h2 style="font-family:Arial; color: rgba(241, 199, 9, 0.918);"><b> Crime Rate prediction</b></h2>
+       
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+
+            <div>
+                <form class="frm" action="{{url_for('predict')}}" method="POST">`
+                         <div style="text-align: center; width: 100%;">
+                    
+                            <div style="padding-left: 20%; padding-top: 20%; width: 500px;">
+                            <select class="form-select" name="cityname" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: large;font-style: italic;width: 50%;" aria-label="Default select example">
+                                <option selected>CITY NAME (United States)</option>
+                                <option value="Atlanta">Atlanta</option>
+                                <option value="Arlington, Texas">Arlington, Texas</option>
+                                <option value="Boston">Boston</option>
+                                <option value="Chicago">Chicago</option>
+                                <option value="Dallas">Dallas</option>
+                                <option value="New York City">New York City</option>
+                                <option value="San Francisco">San Francisco</option>
+                                <option value="Washington, D.C.">Washington, D.C.</option>
+                                <option value="Las Vegas">Las Vegas</option>
+                                <option value="Los Angeles">Los Angeles</option>
+                              </select>
+                            </div>
+            
+                            <div style="padding-left: 20%; padding-top: 5%; width: 500px;">
+                                <select class="form-select" name="year" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-style: italic;width: 50%;" aria-label="Default select example">
+                                    <option selected>YEAR</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                  </select>
+                            </div>
+            
+                                <div style="padding-left: 20%; padding-top: 5%; width: 500px;">
+                                  <select class="form-select"name="crimetype" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: large;font-style: italic; width: 50%;" aria-label="Default select example">
+                                    <option selected>CRIME TYPE</option>
+                                    <option value="homs_sum">homs_sum</option>
+                                    <option value="rape_sum">rape_sum</option>
+                                    <option value="rob_sum">rob_sum</option>
+                                    <option value="agg_ass_sum">agg_ass_sum</option>
+                                    <option value="violent_crime">violent_crime</option>
+                                  </select>
+                                </div>
+                        
+                                <div>           
+                                  <button class="btn btn-primary" style="margin-top: 10%; width: 100px;" type="submit">Predict</button>
+                                </div>
+                        </div>            
+                    </form>
+                </div>
+
+        </div>
+        <div class="col-6">
+      
+            <form class="frm">
+              <P style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, monospace;font-size:x-large;color: rgb(139, 218, 238); text-align: center ;padding-top: 40%; text-rendering: auto;" > PREDICTED CRIMES   =  {{prediction}}</P>
+            </form>
+        </div>
+
+    </div>
+    
+       
+          
+        </div>
+      </div>
+      <div class="footer-container">
+        
+          <div style="margin-left: 2%;">
+            <h3 style="font-family:Arial; color: white;">About Us</h3>
+            <ul>
+              <li style="font-family:Arial; color: white;">Supervised By : Mr.Salman Masih</li>
+              <li style="font-family:Arial; color: white;">Fakhar Zaman</li>
+              <li style="font-family:Arial; color: white;">Air University</li>
+            </ul>  
+          </div>
+   
+ </div>
+</body>
+
+
+</html>
